@@ -16,7 +16,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.http import HttpResponseRedirect
 import os 
-
+from django.http import JsonResponse
 
 class DropBoxViewset(viewsets.ModelViewSet):
  
@@ -79,7 +79,6 @@ class S3FileReadView(View):
 
         return synthesize_text(response_text)
     
-
 def extract_text_from_file(file):
     # Initialize a Textract client
     file_text = ""
@@ -134,6 +133,4 @@ def synthesize_text(text, voice_id='Joanna', output_format='mp3'):
     os.remove("output.mp3")
     response['Content-Disposition'] = 'attachment; filename=filename.mp3' 
     return HttpResponse(file, content_type="audio/mpeg") 
-
-
 

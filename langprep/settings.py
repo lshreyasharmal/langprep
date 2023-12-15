@@ -128,8 +128,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# AWS_ACCESS_KEY_ID = '<access id>'
-# AWS_SECRET_ACCESS_KEY = '<secret key>'
+AWS_ACCESS_KEY_ID = '########'
+AWS_SECRET_ACCESS_KEY = '######'
 AWS_STORAGE_BUCKET_NAME = 'langprep'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_S3_REGION_NAME = 'us-east-1'
