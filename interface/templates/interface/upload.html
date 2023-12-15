@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% extends "rest_framework/base.html" %}
+{% block content %}
+<style>
+    .docupload {
+        padding: 20px;
+        border: 5px solid gray;
+    }
+</style>
+<div class="docupload">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+</div>
+{% endblock %}
